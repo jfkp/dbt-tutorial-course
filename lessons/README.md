@@ -17,3 +17,17 @@ Try running the following commands:
 - dbt run-operation generate_base_model --args '{"source_name": "thelook_ecommerce", "table_name": "orders"}'
 - dbt test --select stg_ecommerce__orders
 - dbt run --select stg_ecommerce__orders
+- dbt commands 
+    dbt clean
+    dbt deps
+    dbt source freshness
+    dbt seed
+    dbt snapshot
+    dbt compile
+    dbt debug --config dir
+    dbt --profiles-dir ./dbt_cloud_profiles run -s stg_ecommerce__products
+    dbt run -s path:models/staging+
+    dbt test -s @stg_ecommerce__order_items
+    dbt build -s my_model is basically a dbt run -s my_model && dbt test -s my_model, 
+                dbt snapshot -s my_model and dbt seed 
+                but dbt build by itself does (model by model):

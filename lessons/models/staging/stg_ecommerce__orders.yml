@@ -1,7 +1,17 @@
 version: 2
+groups:
+  - name: sales
+    owner:
+      email: sales@my-company.com
 
+  - name: marketing
+    owner:
+      email: marketing@my-company.com
 models:
   - name: stg_ecommerce__orders
+    #config:
+    #  group: sales
+    #access: private
     columns:
       - name: order_id
         tests:
