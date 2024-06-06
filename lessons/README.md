@@ -13,3 +13,7 @@ Try running the following commands:
 - Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
 - Find [dbt events](https://events.getdbt.com) near you
 - Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+- dbt run-operation generate_model_yaml --args '{"model_names": ["stg_ecommerce__orders"]}'
+- dbt run-operation generate_base_model --args '{"source_name": "thelook_ecommerce", "table_name": "orders"}'
+- dbt test --select stg_ecommerce__orders
+- dbt run --select stg_ecommerce__orders
